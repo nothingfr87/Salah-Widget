@@ -91,4 +91,4 @@ pip install -r requirements.txt
 
 ## الرخصة
 
-هذا المشروع يستخدم رخصة [MIT](LICENSE)
+هذا المشروع يستخدم رخصة [GPLv3](LICENSE)
