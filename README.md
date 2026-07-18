@@ -4,9 +4,6 @@
 
 ---
 
-## المحتويات
-
----
 
 ## المميزات
 
@@ -91,4 +88,4 @@ pip install -r requirements.txt
 
 ## الرخصة
 
-هذا المشروع يستخدم رخصة [GPLv3](LICENSE)
+هذا المشروع مرخص بموجب [GNU General Public License v3.0](LICENSE) 
