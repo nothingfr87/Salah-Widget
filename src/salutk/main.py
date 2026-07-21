@@ -69,7 +69,8 @@ class Salah(QWidget):
         border-bottom:2px solid #1c1c1c;
         """)
         date_layout = QHBoxLayout()
-        hijri_date = QLabel(f"{self.hijri_day} {self.hijri_month} {self.hijri_year} هـ")
+        hijri_date = QLabel(
+            f"{self.hijri_day} {self.hijri_month} {self.hijri_year} هـ")
         hijri_date.setAlignment(Qt.AlignHCenter)
         hijri_date.setStyleSheet("""
         color:#ffd700;
@@ -107,7 +108,7 @@ class Salah(QWidget):
             layout.addWidget(name)
             layout.addStretch()
             layout.addWidget(prayer_time)
-            layout.setContentsMargins(10,10,10,10)
+            layout.setContentsMargins(10, 10, 10, 10)
             return container
 
         salah_layout.addWidget(salah_card("صلاة الفجر", self.fajr))
@@ -120,7 +121,13 @@ class Salah(QWidget):
         main_layout.addWidget(date_group)
         main_layout.addWidget(salah_group)
 
-app = QApplication(sys.argv)
-window = Salah()
-window.show()
-sys.exit(app.exec_())
+
+def main():
+    app = QApplication(sys.argv)
+    window = Salah()
+    window.show()
+    sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()
