@@ -62,7 +62,7 @@ pip install -r requirements.txt
 قم بكتابة
 
 ```bash
-pip install sulatk==1.0.0
+pip install --upgrade salutk
 ```
 
 وسوف يثبت معك جميع الحزم المتطلبة لتشغيل الودجت

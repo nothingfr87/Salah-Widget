@@ -1,4 +1,4 @@
 .venv/
 dist/
 src/__pycache__
-src/sulatk.egg-info/
+src/*.egg-info/

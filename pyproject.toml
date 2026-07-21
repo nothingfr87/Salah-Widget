@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sulatk"
-version = "1.0.0"
+name = "salutk"
+version = "1.0.1"
 authors = [
     {name = "Nothing"}
 ]
@@ -23,10 +23,10 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com"
+"Homepage" = "https://github.com/nothingfr87/Salah-Widget"
 
 [project.scripts]
-sulatk = "sulatk.main:main"
+salutk = "salutk.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

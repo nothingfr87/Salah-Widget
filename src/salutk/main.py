@@ -5,6 +5,8 @@ from datetime import *
 from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QHBoxLayout, QVBoxLayout, QGroupBox
 from PyQt5.QtCore import Qt
 from PyQt5 import QtCore
+from PyQt5.QtGui import QFontDatabase
+import importlib.resources
 
 base_url = "https://api.aladhan.com/v1"
 now = datetime.now()
@@ -21,6 +23,14 @@ class Salah(QWidget):
             "background-color: #1a1a1a;")
         self.setWindowFlags(Qt.FramelessWindowHint | QtCore.Qt.Tool)
         self.setLayoutDirection(QtCore.Qt.RightToLeft)
+
+        try:
+            if importlib.resources.is_resource('salutk.assets', 'font.ttf'):
+                font_data = importlib.resources.read_binary(
+                    'salutk.assets', 'font.ttf')
+                QFontDatabase.addApplicationFontFromData(font_data)
+        except Exception:
+            pass
 
         self.get_prayer()
         self.UI()
@@ -95,13 +105,13 @@ class Salah(QWidget):
             prayer_time = QLabel(time)
             name.setStyleSheet("""
                 color:#ffffff;
-                font-family:'IBM Plex Sans Arabic';
+                font-family:'IBM Plex Sans Arabic', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
                 font-size:16px;
                 font-weight:600;
             """)
             prayer_time.setStyleSheet("""
                 color:#ffffff;
-                font-family:'IBM Plex Sans Arabic';
+                font-family:'IBM Plex Sans Arabic', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
                 font-size:16px;
                 font-weight:600;
             """)
